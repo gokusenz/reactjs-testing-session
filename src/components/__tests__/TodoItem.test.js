@@ -13,5 +13,6 @@ describe('TodoItem', () => {
     const component = shallow(<TodoItem text="Hello" complete />)
 
     expect(component.hasClass('complete')).toBe(true)
+    expect(component.text()).toBe('Hello')
   })
 })

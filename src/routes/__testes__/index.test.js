@@ -13,6 +13,15 @@ describe('Routes', () => {
         <Routes />
       </Router>
     )
+    expect(component.text()).toEqual('App')
+  })
+
+  it('should render Login if path is /login', () => {
+    const component = mount(
+      <Router initialEntries={['/login']}>
+        <Routes />
+      </Router>
+    )
     expect(component.text()).toEqual('Login')
   })
 })

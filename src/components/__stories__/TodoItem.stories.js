@@ -5,10 +5,10 @@ import TodoItem from '../TodoItem'
 
 storiesOf('TodoItem', module)
   .addDecorator(withKnobs)
-  .add('not complete', () => (
+  .addWithInfo('not complete', 'An incomplete todo item', () => (
     <TodoItem text={text('Text', 'Not Complete')} />
   ))
-  .add('complete', () => (
+  .addWithInfo('complete', 'A complete todo item', () => (
     <TodoItem
       text={text('Text', 'Complete')}
       complete={boolean('Complete', true)}

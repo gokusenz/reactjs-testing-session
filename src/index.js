@@ -22,6 +22,6 @@ render(AppRoot)
 
 if (module.hot) {
   module.hot.accept('./components/App', () => {
-    render(App)
+    render(AppRoot)
   })
 }

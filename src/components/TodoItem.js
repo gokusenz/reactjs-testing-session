@@ -5,8 +5,11 @@ const TodoItem = ({ text, complete }) => (
   <li className={complete ? style.complete : ''}>{text}</li>
 )
 
-TodoItem.prototype = {
+TodoItem.propTypes = {
   text: PropTypes.string.isRequired,
   complete: PropTypes.bool,
+}
+TodoItem.defaultProps = {
+  complete: true,
 }
 export default TodoItem
